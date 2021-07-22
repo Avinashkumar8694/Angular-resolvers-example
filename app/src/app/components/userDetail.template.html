@@ -1,0 +1,68 @@
+<form #userform>
+  <div fxLayout="column " style="height:100vh;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <header><img [src]="&apos;https://goneutrinos.com/wp-content/uploads/2020/07/logo-light.png&apos;"></header>
+    <div fxLayout="column " style=" " class="user-form" fxLayoutGap="1rem" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-list>
+        <mat-list-item style="border-bottom: 1px solid black">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <h3>
+              Users Detail</h3>
+          </div>
+        </mat-list-item>
+        <mat-list-item style="border-bottom: 1px solid lightgray; cursor: pointer">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                Name</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{page.userDetails.name}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+        <mat-list-item style="border-bottom: 1px solid lightgray; cursor: pointer">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                Email</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{page.userDetails.email}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+        <mat-list-item style="border-bottom: 1px solid lightgray; cursor: pointer">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                Mobile</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{page.userDetails.mobile}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+        <mat-list-item style="border-bottom: 1px solid lightgray; cursor: pointer">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                Organisation</div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{page.userDetails.organisation}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+        <div fxLayout="row " style="padding:1rem" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button routerLink="/userlist">Show Users List</button></div>
+      </mat-list>
+    </div>
+  </div>
+</form>

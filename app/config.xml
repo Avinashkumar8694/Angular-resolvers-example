@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="co.neutrinos.use_legacy_service" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>use-legacy-service</name>
+    <description>form</description>
+    <author email="ideas@neutrinos.co" href="http://neutrinos.co">
+        Neutrinos Team
+    </author>
+    <content src="index.html"/>
+    <access origin="*"/>
+    <allow-navigation href="*"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <preference name="SplashMaintainAspectRatio" value="true"/>
+    <preference name="OverrideUserAgent" value="Mozilla/5.0 Google"/>
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true"/>
+        </edit-config>
+        <allow-intent href="market:*"/>
+        <icon src="src/assets/Android/res/drawable/icon.png"/>
+        <icon density="ldpi" src="src/assets/Android/res/drawable-ldpi/icon.png"/>
+        <icon density="mdpi" src="src/assets/Android/res/drawable-mdpi/icon.png"/>
+        <icon density="hdpi" src="src/assets/Android/res/drawable-hdpi/icon.png"/>
+        <icon density="xhdpi" src="src/assets/Android/res/drawable-xhdpi/icon.png"/>
+        <icon density="xxhdpi" src="src/assets/Android/res/drawable-xxhdpi/icon.png"/>
+        <icon density="xxxhdpi" src="src/assets/Android/res/drawable-xxxhdpi/icon.png"/>
+        <splash src="src/assets/Android/res/drawable/screen.png"/>
+        <splash src="src/assets/Android/res/drawable-land/screen.png"/>
+        <splash density="ldpi" src="src/assets/Android/res/drawable-ldpi/screen.png"/>
+        <splash density="land-ldpi" src="src/assets/Android/res/drawable-land-ldpi/screen.png"/>
+        <splash density="mdpi" src="src/assets/Android/res/drawable-mdpi/screen.png"/>
+        <splash density="land-mdpi" src="src/assets/Android/res/drawable-land-mdpi/screen.png"/>
+        <splash density="hdpi" src="src/assets/Android/res/drawable-hdpi/screen.png"/>
+        <splash density="land-hdpi" src="src/assets/Android/res/drawable-land-hdpi/screen.png"/>
+        <splash density="xhdpi" src="src/assets/Android/res/drawable-xhdpi/screen.png"/>
+        <splash density="land-xhdpi" src="src/assets/Android/res/drawable-land-xhdpi/screen.png"/>
+        <splash density="xxhdpi" src="src/assets/Android/res/drawable-xxhdpi/screen.png"/>
+        <splash density="land-xxhdpi" src="src/assets/Android/res/drawable-land-xxhdpi/screen.png"/>
+        <splash density="xxxhdpi" src="src/assets/Android/res/drawable-xxxhdpi/screen.png"/>
+        <splash density="land-xxxhdpi" src="src/assets/Android/res/drawable-land-xxxhdpi/screen.png"/>
+        <resource-file src="google-services.json" target="app/google-services.json"/>
+        <hook src="scripts/beforeBuild.js" type="before_build"/>
+    </platform>
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="SplashShowOnlyFirstTime" value="false"/>
+    <preference name="orientation" value="portrait"/>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen"/>
+        <param name="android-package" value="org.apache.cordova.SplashScreen"/>
+    </feature>
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+        <preference name="webviewbounce" value="false"/>
+        <preference name="UIWebViewBounce" value="false"/>
+        <preference name="DisallowOverscroll" value="true"/>
+        <preference name="FadeSplashScreen" value="false"/>
+        <preference name="AutoHideSplashScreen" value="false"/>
+        <resource-file src="GoogleService-Info.plist"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@2x~iphone~anyany.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@2x~iphone~comany.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@2x~iphone~comcom.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@3x~iphone~anyany.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@3x~iphone~anycom.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@3x~iphone~comany.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@2x~ipad~anyany.png"/>
+        <splash src="src/assets/iOS/Resources/splash/Default@2x~ipad~comany.png"/>
+        <icon height="180" src="src/assets/iOS/Resources/icons/icon-60@3x.png" width="180"/>
+        <icon height="60" src="src/assets/iOS/Resources/icons/icon-60.png" width="60"/>
+        <icon height="120" src="src/assets/iOS/Resources/icons/icon-60@2x.png" width="120"/>
+        <icon height="76" src="src/assets/iOS/Resources/icons/icon-76.png" width="76"/>
+        <icon height="152" src="src/assets/iOS/Resources/icons/icon-76@2x.png" width="152"/>
+        <icon height="40" src="src/assets/iOS/Resources/icons/icon-40.png" width="40"/>
+        <icon height="80" src="src/assets/iOS/Resources/icons/icon-40@2x.png" width="80"/>
+        <icon height="57" src="src/assets/iOS/Resources/icons/icon.png" width="57"/>
+        <icon height="114" src="src/assets/iOS/Resources/icons/icon@2x.png" width="114"/>
+        <icon height="72" src="src/assets/iOS/Resources/icons/icon-72.png" width="72"/>
+        <icon height="144" src="src/assets/iOS/Resources/icons/icon-72@2x.png" width="144"/>
+        <icon height="29" src="src/assets/iOS/Resources/icons/icon-small.png" width="29"/>
+        <icon height="58" src="src/assets/iOS/Resources/icons/icon-small@2x.png" width="58"/>
+        <icon height="50" src="src/assets/iOS/Resources/icons/icon-50.png" width="50"/>
+        <icon height="100" src="src/assets/iOS/Resources/icons/icon-50@2x.png" width="100"/>
+        <config-file target="*-Info.plist" parent="UIFileSharingEnabled">
+            <true/>
+        </config-file>
+    </platform>
+    <plugin name="cordova-plugin-device" spec="2.0.2"/>
+    <engine name="android" spec="9.0.0"/>
+    <engine name="ios" spec="6.1.1"/>
+	<!-- <plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.2" /> -->
+    <plugin name="cordova-plugin-x-toast" spec="2.7.2"/>
+    <plugin name="cordova-plugin-inappbrowser" spec="4.0.0"/>
+    <plugin name="cordova-plugin-splashscreen" spec="6.0.0"/>
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3"/>
+    <plugin name="phonegap-plugin-push" spec="2.2.3">
+        <variable name="SENDER_ID" value="1:626566066881:android:aecfd1651b40f793"/>
+    </plugin>
+    <plugin name="cordova-plugin-camera" spec="4.0.3">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value=""/>
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=""/>
+    </plugin>
+    <plugin name="cordova-plugin-file" spec="6.0.1"/>
+    <plugin name="cordova-plugin-geolocation" spec="4.0.1"/>
+    <plugin name="cordova.plugins.diagnostic" spec="4.0.10"/>
+    <config-file platform="ios" target="*-Info.plist" parent="NSBluetoothAlwaysUsageDescription">
+      <string>This app requires access to function properly</string>
+    </config-file>
+    <!-- <plugin name="cordova-plugin-document-scanner" spec="2.0.1" /> -->
+    <!-- <plugin name="phonegap-plugin-barcodescanner" spec="8.0.1" /> -->
+    <!-- <plugin name="cordova-plugin-media-capture" spec="3.0.2" /> -->
+    <!-- <plugin name="cordova-plugin-fingerprint-aio" spec="2.0.0" /> -->
+    <!-- <plugin name="cordova-plugin-neutts" spec="1.0.0" /> -->
+    <!-- <plugin name="cordova-plugin-mobile-ocr" spec="1.0.0" /> -->
+    <!-- <plugin name="cordova-plugin-neushake" spec="1.0.0" /> -->
+    <plugin name="cordova-plugin-uniquedeviceid" spec="1.3.2"/>
+    <plugin name="com.cordova.plugins.cookiemaster" spec="1.0.1"/>
+    <plugin name="@ahovakimyan/cordova-plugin-wkwebviewxhrfix" spec="1.0.0"/>
+    <plugin name="cordova-plugin-neucookies" spec="1.0.0"/>
+</widget>
