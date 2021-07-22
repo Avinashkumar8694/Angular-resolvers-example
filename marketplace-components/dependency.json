@@ -1,0 +1,630 @@
+{
+    "packages": [
+        {
+            "name": "neutrinos-all-default-nodes-plugin",
+            "default": true,
+            "visible": false,
+            "dependencies": [
+                {
+                    "name": "ndefault-all-nodes",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            "ChildProcess",
+                            "CORS",
+                            "DBConfig",
+                            "GlobalMiddlewareEnd",
+                            "GlobalMiddlewareStart",
+                            "GlobalNext",
+                            "HttpIn",
+                            "HttpOut",
+                            "HttpProxyConfig",
+                            "ServerHttpRequest",
+                            "MiddlewareEnd",
+                            "MiddlewareStart",
+                            "Next",
+                            "RouteMiddlewareEnd",
+                            "RouteMiddlewareStart",
+                            "ServerLog",
+                            "TLSConfig"
+                        ],
+                        "common": [
+                            "Catch",
+                            "Comments",
+                            "Script",
+                            "Unknown"
+                        ],
+                        "pages": [
+                            "PageCallService",
+                            "PageStart",
+                            "PageSwitch",
+                            "ViewPicker",
+                            "PageVariables",
+                            "PageServiceVariables"
+                        ],
+                        "client-server": [
+                            "ServiceVariables",
+                            "CallService",
+                            "Start",
+                            "Switch",
+                            "Async"
+                        ],
+                        "client-pages": [
+                            "Environment",
+                            "HttpRequest",
+                            "Log",
+                            "Navigation",
+                            "SnackBar",
+                            "Storage",
+                            "CallSSDApi",
+                            "UseDependency"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-active-directory-plugin",
+            "description": "All dependencies to do active directory operations.",
+            "displayName": "Active Directory",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-active-directory",
+                    "packageType": "studio-nodes",
+                    "displayName": "Active Directory Node",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "ActiveDirectory",
+                                "dependencies": [
+                                    {
+                                        "name": "activedirectory",
+                                        "version": "0.7.2"
+                                    },
+                                    {
+                                        "name": "http-status-codes",
+                                        "version": "2.1.4"
+                                    }
+                                ]
+                            },
+                            "ADConfig"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-amqp-plugin",
+            "description": "AMQP Plugin",
+            "displayName": "AMQP Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-amqp-producer",
+                    "packageType": "studio-nodes",
+                    "displayName": "AMPQ Producer",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "AMQPProducer",
+                                "dependencies": [
+                                    {
+                                        "name": "amqplib",
+                                        "version": "0.6.0"
+                                    }
+                                ],
+                                "devDependencies": [
+                                    {
+                                        "name": "@types/amqplib",
+                                        "version": "0.5.17"
+                                    }
+                                ]
+                            },
+                            "AMQPConfig"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-csv-plugin",
+            "description": "CSV Plugin",
+            "displayName": "CSV Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-csv",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "CSV",
+                                "dependencies": [
+                                    {
+                                        "name": "csv-parse",
+                                        "version": "4.14.2"
+                                    },
+                                    {
+                                        "name": "csv-stringify",
+                                        "version": "5.6.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-file-plugin",
+            "description": "File Plugin",
+            "displayName": "File Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-file",
+                    "packageType": "studio-nodes",
+                    "displayName": "File In/Out",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "FileIn",
+                                "dependencies": [
+                                    {
+                                        "name": "iconv-lite",
+                                        "version": "0.6.2"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "FileOut"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-json-plugin",
+            "description": "JSON Parser",
+            "displayName": "JSON Parser",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-json",
+                    "packageType": "studio-nodes",
+                    "displayName": "JSON",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "JSONConverter"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-mongodb-plugin",
+            "description": "MongoDB",
+            "displayName": "MongoDB",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-mongodb",
+                    "packageType": "studio-nodes",
+                    "displayName": "MongoDB",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "Mongodb",
+                                "dependencies": [
+                                    {
+                                        "name": "mongodb",
+                                        "version": "3.6.3"
+                                    },
+                                    {
+                                        "name": "bson",
+                                        "version": "4.2.2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-session-plugin",
+            "description": "Session Management Plugin",
+            "displayName": "Session Management Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-session",
+                    "packageType": "studio-nodes",
+                    "displayName": "Session",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "Session"
+                            },
+                            {
+                                "name": "GlobalSession"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-mongo-session-plugin",
+            "description": "Mongo Session Plugin",
+            "displayName": "Mongo Session Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-mongo-session",
+                    "packageType": "studio-nodes",
+                    "displayName": "Mongo Session",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "GlobalMongoSession",
+                                "dependencies": [
+                                    {
+                                        "name": "mongodb",
+                                        "version": "3.6.3"
+                                    },
+                                    {
+                                        "name": "bson",
+                                        "version": "4.2.2"
+                                    },
+                                    {
+                                        "name": "neutrinos-mongodb-session-store",
+                                        "version": "0.0.1"
+                                    },
+                                    {
+                                        "name": "@types/express-session",
+                                        "version": "1.17.3"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-sql-plugin",
+            "description": "SQL Plugin",
+            "displayName": "SQL Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-sql",
+                    "packageType": "studio-nodes",
+                    "displayName": "SQL",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "ExecuteSql",
+                                "dependencies": [
+                                    {
+                                        "name": "typeorm",
+                                        "version": "0.2.29"
+                                    },
+                                    {
+                                        "name": "typeorm-static",
+                                        "version": "1.1.1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-xml-plugin",
+            "description": "XML Plugin",
+            "displayName": "XML Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-xml",
+                    "packageType": "studio-nodes",
+                    "displayName": "XML",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "XML",
+                                "dependencies": [
+                                    {
+                                        "name": "xml2js",
+                                        "version": "0.4.23"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-yml-plugin",
+            "description": "YML Plugin",
+            "displayName": "YML Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-yml",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "YML",
+                                "dependencies": [
+                                    {
+                                        "name": "js-yaml",
+                                        "version": "4.0.0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-email-plugin",
+            "description": "Email Plugin",
+            "displayName": "Email Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-email",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "EmailOut",
+                                "dependencies": [
+                                    {
+                                        "name": "poplib",
+                                        "version": "0.1.7"
+                                    },
+                                    {
+                                        "name": "nodemailer",
+                                        "version": "6.4.17"
+                                    },
+                                    {
+                                        "name": "mailparser",
+                                        "version": "3.0.1"
+                                    },
+                                    {
+                                        "name": "imap",
+                                        "version": "0.8.19"
+                                    }
+                                ]
+                            },
+                            "EmailOutConfig"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-callsoap-plugin",
+            "description": "Call Soap Plugin",
+            "displayName": "Call Soap Plugin",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-call-soap",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "Soap",
+                                "dependencies": [
+                                    {
+                                        "name": "strong-soap",
+                                        "version": "1.22.1"
+                                    }
+                                ]
+                            },
+                            "SoapConfig",
+                            "BasicAuthConfig"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-pub-sub",
+            "description": "Pub Sub for server",
+            "displayName": "Pub Sub for server",
+            "default": true,
+            "dependencies": [
+                {
+                    "name": "ndefault-pub-sub",
+                    "packageType": "studio-nodes",
+                    "nodes": {
+                        "server": [
+                            {
+                                "name": "listen",
+                                "dependencies": []
+                            },
+                            {
+                                "name": "emit",
+                                "dependencies": []
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "devid": "165010b2-9099-5b62-6926-9a6962e22ba6",
+            "name": "neutrinos-internet",
+            "displayName": "Internet",
+            "version": "1.0.0",
+            "default": true,
+            "username": "avinash.gupta@neutrinos.co",
+            "publisher": "Neutrinos",
+            "platformSupportVersion": {
+                "min": "7.7.0"
+            },
+            "description": "Client Side Designer node to check internet connectivity.",
+            "pluginImage": "",
+            "dependencies": [
+                {
+                    "name": "neutrinos-internet",
+                    "displayName": "Internet",
+                    "packageType": "studio-nodes",
+                    "version": "1.0.0",
+                    "nodes": {
+                        "client-pages": [
+                            {
+                                "name": "09116728-8c4c-739f-c7da-625634afe918",
+                                "displayName": "On Online"
+                            },
+                            {
+                                "name": "c6ef8916-35f2-a758-e8d5-8b61fdac762d",
+                                "displayName": "On Offline"
+                            },
+                            {
+                                "name": "9f050d9a-4bf7-fc9b-6e14-cf39e33ead30",
+                                "displayName": "isOnline"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "devid": "68bc9eec-a2fc-bccd-1630-883e4552c3eb",
+            "name": "neutrinos-lifecycle-events",
+            "displayName": "Lifecycle Events",
+            "version": "1.0.0",
+            "username": "avinash.gupta@neutrinos.co",
+            "publisher": "Neutrinos",
+            "default": true,
+            "visible": false,
+            "platformSupportVersion": {
+                "min": "7.8.0"
+            },
+            "dependencies": [
+                {
+                    "name": "neutrinos-lifecycle-events",
+                    "displayName": "Lifecycle Events",
+                    "packageType": "studio-nodes",
+                    "version": "1.0.0",
+                    "nodes": {
+                        "pages": [
+                            {
+                                "name": "OnChanges",
+                                "displayName": "On Changes"
+                            },
+                            {
+                                "name": "OnInit",
+                                "displayName": "On Init"
+                            },
+                            {
+                                "name": "DoCheck",
+                                "displayName": "Do Check"
+                            },
+                            {
+                                "name": "AfterContentInit",
+                                "displayName": "After Content Init"
+                            },
+                            {
+                                "name": "AfterContentChecked",
+                                "displayName": "After Content Checked"
+                            },
+                            {
+                                "name": "AfterViewInit",
+                                "displayName": "After View Init"
+                            },
+                            {
+                                "name": "AfterViewChecked",
+                                "displayName": "After View Checked"
+                            },
+                            {
+                                "name": "OnDestroy",
+                                "displayName": "On Destroy"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "devid": "1dd8ed79-2f61-798f-0570-c8b153987b2c",
+            "name": "neutrinos-dialog",
+            "displayName": "Dialog",
+            "version": "1.0.0",
+            "username": "avinash.gupta@neutrinos.co",
+            "publisher": "Neutrinos",
+            "platformSupportVersion": {
+                "min": "7.8.0"
+            },
+            "default": true,
+            "visible": false,
+            "dependencies": [
+                {
+                    "name": "neutrinos-dialog",
+                    "displayName": "Dialog",
+                    "packageType": "studio-nodes",
+                    "version": "1.0.0",
+                    "nodes": {
+                        "pages": [
+                            {
+                                "name": "OpenDialog",
+                                "displayName": "Open Dialog"
+                            },
+                            {
+                                "name": "GetDialogData",
+                                "displayName": "Get Dialog Data"
+                            },
+                            {
+                                "name": "CloseDialog",
+                                "displayName": "Close Dialog"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "neutrinos-listener",
+            "displayName": "HostListener",
+            "version": "1.0.0",
+            "username": "avinash.gupta@neutrinos.co",
+            "publisher": "Neutrinos",
+            "platformSupportVersion": {
+                "min": "7.8.0"
+            },
+            "default": true,
+            "visible": false,
+            "dependencies": [
+                {
+                    "name": "neutrinos-listener",
+                    "displayName": "HostListener",
+                    "packageType": "studio-nodes",
+                    "version": "1.0.0",
+                    "nodes": {
+                        "pages": [
+                            {
+                                "name": "HostListener",
+                                "displayName": "Host Listener"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

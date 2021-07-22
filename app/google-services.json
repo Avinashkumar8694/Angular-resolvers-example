@@ -1,0 +1,104 @@
+{
+    "project_info": {
+        "project_number": "626566066881",
+        "firebase_url": "https://bhive-1169d.firebaseio.com",
+        "project_id": "bhive-1169d",
+        "storage_bucket": "bhive-1169d.appspot.com"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:626566066881:android:aecfd1651b40f793",
+                "android_client_info": {
+                    "package_name": "co.neutrinos.use_legacy_service"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "626566066881-ne589am7po1mrt3bkh67o6i80f8bu99u.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyA0qg3QL3GnDmrOGacdGac6mGyE86uaw5c"
+                }
+            ],
+            "services": {
+                "analytics_service": {
+                    "status": 1
+                },
+                "appinvite_service": {
+                    "status": 1,
+                    "other_platform_oauth_client": []
+                },
+                "ads_service": {
+                    "status": 2
+                }
+            }
+        },
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:626566066881:android:526ceacd73936248",
+                "android_client_info": {
+                    "package_name": "co.neutrinos.use_legacy_service"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "626566066881-ne589am7po1mrt3bkh67o6i80f8bu99u.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyA0qg3QL3GnDmrOGacdGac6mGyE86uaw5c"
+                }
+            ],
+            "services": {
+                "analytics_service": {
+                    "status": 1
+                },
+                "appinvite_service": {
+                    "status": 1,
+                    "other_platform_oauth_client": []
+                },
+                "ads_service": {
+                    "status": 2
+                }
+            }
+        },
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:626566066881:android:953023f903e9daf0",
+                "android_client_info": {
+                    "package_name": "co.neutrinos.use_legacy_service"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "626566066881-ne589am7po1mrt3bkh67o6i80f8bu99u.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyA0qg3QL3GnDmrOGacdGac6mGyE86uaw5c"
+                }
+            ],
+            "services": {
+                "analytics_service": {
+                    "status": 1
+                },
+                "appinvite_service": {
+                    "status": 1,
+                    "other_platform_oauth_client": []
+                },
+                "ads_service": {
+                    "status": 2
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

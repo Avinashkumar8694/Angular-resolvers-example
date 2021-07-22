@@ -1,0 +1,14 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+.user-form{
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.listitem:hover{
+    background-color: lightgray;
+}
