@@ -1,0 +1,253 @@
+[
+    {
+        "id": "sd_JQgS5GgSKl46QQiC",
+        "type": "tab",
+        "createdDate": "2021-07-21T19:38:08.737Z",
+        "label": "userForm",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "userFormComponent"
+    },
+    {
+        "id": "sd_TNXnNYvQOPKCVeQs",
+        "type": "OnInit",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "On Init",
+        "functionName": "ngOnInit",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 120,
+        "wires": [
+            [
+                "sd_111VEeLXkNZ5Kfl9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "userFormComponent"
+    },
+    {
+        "id": "sd_tjFATEJKdLDUZEOq",
+        "type": "Script",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.user = {\n    name: '',\n    organisation: '',\n    email: '',\n    mobile: '',\n    address: '',\n}",
+        "functionName": "sd_tjFATEJKdLDUZEOq",
+        "category": "Function",
+        "x": 285,
+        "y": 120,
+        "wires": [
+            [
+                "sd_q8PSo4R8WkmxSHMq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "userFormComponent"
+    },
+    {
+        "id": "sd_q8PSo4R8WkmxSHMq",
+        "type": "PageVariables",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_q8PSo4R8WkmxSHMq",
+        "category": "Function",
+        "x": 405,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_cyhbApcRd9DEK0rm",
+        "type": "PageStart",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "add",
+        "category": "General",
+        "x": 105,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Dh1LGOvC5cEASgqT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "userFormComponent"
+    },
+    {
+        "id": "sd_au2DMPo2HzyxbyIm",
+        "type": "PageStart",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "cancel",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "cancel",
+        "category": "General",
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "sd_Qp6Uf7BsFk3qJkVk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "userFormComponent"
+    },
+    {
+        "id": "sd_r0pkjNEvIChvyaZJ",
+        "type": "Script",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.userService.addUserDetail(this.page.user);\n// console.log('outputt',bh.response);",
+        "functionName": "sd_r0pkjNEvIChvyaZJ",
+        "category": "Function",
+        "x": 305,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Qp6Uf7BsFk3qJkVk",
+        "type": "Script",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.user = {\n    name: '',\n    organisation: '',\n    email: '',\n    mobile: '',\n    address: '',\n}",
+        "functionName": "sd_Qp6Uf7BsFk3qJkVk",
+        "category": "Function",
+        "x": 345,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_111VEeLXkNZ5Kfl9",
+        "type": "UseDependency",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "userService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "userService"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/user/user.service",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_111VEeLXkNZ5Kfl9",
+        "category": "Function",
+        "x": 185,
+        "y": 120,
+        "wires": [
+            [
+                "sd_tjFATEJKdLDUZEOq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Dh1LGOvC5cEASgqT",
+        "type": "HttpRequest",
+        "z": "sd_JQgS5GgSKl46QQiC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "http://localhost:8081/api/adduser",
+        "urlMapping": "",
+        "urlMappingObj": {},
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.user",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "user"
+        },
+        "resultMapping": "bh.response",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_Dh1LGOvC5cEASgqT",
+        "category": "HTTP",
+        "x": 205,
+        "y": 300,
+        "wires": [
+            [
+                "sd_r0pkjNEvIChvyaZJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

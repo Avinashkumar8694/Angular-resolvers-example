@@ -1,0 +1,122 @@
+[
+    {
+        "id": "sd_qYliGwMsOD5dWA78",
+        "type": "tab",
+        "createdDate": "2021-07-21T21:09:16.533Z",
+        "label": "userDetail",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "userDetailComponent"
+    },
+    {
+        "id": "sd_crOdQZBxbl4lUUsJ",
+        "type": "OnInit",
+        "z": "sd_qYliGwMsOD5dWA78",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "On Init",
+        "functionName": "ngOnInit",
+        "category": "Lifecycle Events",
+        "x": 25,
+        "y": 80,
+        "wires": [
+            [
+                "sd_IMaYDazXHEYZ1Xe6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "userDetailComponent"
+    },
+    {
+        "id": "sd_FDqnddw41mtN1wBK",
+        "type": "Script",
+        "z": "sd_qYliGwMsOD5dWA78",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nif (this.page.activatedRoute.snapshot.data && this.page.activatedRoute.snapshot.data.userDetails) {\n    this.page['userDetails'] = this.page.activatedRoute.snapshot.data.userDetails.length > 0 ? this.page.activatedRoute.snapshot.data.userDetails[0] : null;\n    console.log('this.page.userDetails====',this.page['userDetails']);\n}\n",
+        "functionName": "sd_FDqnddw41mtN1wBK",
+        "category": "Function",
+        "x": 225,
+        "y": 100,
+        "wires": [
+            [
+                "sd_CyBDy02wRXLrq9t4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_CyBDy02wRXLrq9t4",
+        "type": "PageVariables",
+        "z": "sd_qYliGwMsOD5dWA78",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_CyBDy02wRXLrq9t4",
+        "category": "Function",
+        "x": 345,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_IMaYDazXHEYZ1Xe6",
+        "type": "UseDependency",
+        "z": "sd_qYliGwMsOD5dWA78",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "ActivatedRoute",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "activatedRoute"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "Router",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "route"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/router",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_IMaYDazXHEYZ1Xe6",
+        "category": "Function",
+        "x": 125,
+        "y": 80,
+        "wires": [
+            [
+                "sd_FDqnddw41mtN1wBK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

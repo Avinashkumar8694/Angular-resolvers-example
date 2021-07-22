@@ -1,0 +1,28 @@
+<form #userform>
+  <div fxLayout="column " style="height:100vh;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <header><img [src]="&apos;https://goneutrinos.com/wp-content/uploads/2020/07/logo-light.png&apos;"></header>
+    <div fxLayout="column " style=" " class="user-form" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput [(ngModel)]="page.user.name" name="name" placeholder="Name" [required]="true" id="name">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput [(ngModel)]="page.user.organisation" name="organisation" placeholder="Organisation" [required]="true" id="organisation">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput [(ngModel)]="page.user.email" name="email" placeholder="Email Id" [required]="true" id="email">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput [(ngModel)]="page.user.mobile" name="mobile" placeholder="Mobile" [required]="true" id="mobile">
+
+      </mat-form-field>
+      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput [(ngModel)]="page.user.address" name="address" placeholder="Address" [required]="true" id="address">
+
+      </mat-form-field>
+      <div fxLayout="row " fxLayoutGap="1rem" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button (click)="cancel()">Cancel</button><button mat-raised-button (click)="add()" [disabled]="userform.invalid ? true : false" type="button">Submit</button><button mat-raised-button routerLink="/userlist">Show Users List</button></div>
+    </div>
+  </div>
+</form>

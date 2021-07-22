@@ -1,0 +1,29 @@
+{
+    "routes": [
+        {
+            "path": "userform",
+            "component": "userFormComponent",
+            "resolve": ""
+        },
+        {
+            "path": "userlist",
+            "component": "userlistComponent",
+            "resolve": "{userList : _userslistService}"
+        },
+        {
+            "path": "userdetails/:email",
+            "component": "userDetailComponent",
+            "resolve": "{userDetails : userService}"
+        },
+        {
+            "path": "''",
+            "redirectTo": "userform",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/app/dist
+/app/tmp
+/app/out-tsc
+/app/www
+
+# dependencies
+/app/node_modules
+/app/platforms
+/app/plugins
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# e2e
+/app/e2e/*.js
+/app/e2e/*.map
+/app/e2e
+
+# System Files
+.DS_Store
+Thumbs.db
+/app/yarn.lock
+/app/package-lock.json
+
+# Server-side gitignore file
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+server/build
+#/tmp
+
+
+# dependencies
+server/node_modules
+
+# IDEs and editors
+server/.idea
+server/.project
+server/.classpath
+server/.c9/
+server/*.launch
+server/.settings/
+server/*.sublime-workspace
+
+# IDE - VSCode
+server/.vscode/*
+!server/.vscode/settings.json
+!server/.vscode/tasks.json
+!server/.vscode/launch.json
+!server/.vscode/extensions.json
+
+# misc
+server/.sass-cache
+server/connect.lock
+server/coverage
+server/libpeerconnection.log
+server/npm-debug.log
+server/testem.log
+server/typings
+server/package-lock.json
+server/logs
+
+# e2e
+server/e2e/*.js
+server/e2e/*.map
+
+# System Files
+server/.DS_Store
+server/Thumbs.db
+server/.tscache

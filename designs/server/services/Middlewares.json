@@ -1,0 +1,76 @@
+[
+    {
+        "id": "ssd_mw_ws",
+        "type": "tab",
+        "createdDate": "createdDate",
+        "label": "Middlewares",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ssd_global_middleware_start_id",
+        "type": "GlobalMiddlewareStart",
+        "z": "ssd_mw_ws",
+        "inputs": 0,
+        "outputs": 1,
+        "x": 141,
+        "y": 102.8125,
+        "wires": [
+            [
+                "sd_Tp9jNbUvUZ1kJnAn"
+            ]
+        ]
+    },
+    {
+        "id": "ssd_global_next_id",
+        "type": "GlobalNext",
+        "z": "ssd_mw_ws",
+        "inputs": 1,
+        "outputs": 1,
+        "x": 474.1875,
+        "y": 103.90625,
+        "wires": [
+            [
+                "ssd_global_middleware_end_id"
+            ]
+        ]
+    },
+    {
+        "id": "ssd_global_middleware_end_id",
+        "type": "GlobalMiddlewareEnd",
+        "z": "ssd_mw_ws",
+        "name": "",
+        "inputs": 1,
+        "outputs": 0,
+        "x": 657.84375,
+        "y": 102.8125,
+        "wires": []
+    },
+    {
+        "id": "sd_Tp9jNbUvUZ1kJnAn",
+        "type": "CORS",
+        "z": "ssd_mw_ws",
+        "viewType": "server",
+        "nodeType": "middleware",
+        "methods": [],
+        "origin": true,
+        "editableListData": {
+            "methods": [],
+            "allowedHeaders": [],
+            "exposedHeaders": []
+        },
+        "showOriginToggleButton": true,
+        "credentials": false,
+        "maxAge": "",
+        "preflightContinue": false,
+        "optionsSuccessStatus": "",
+        "category": "Global",
+        "x": 308.890625,
+        "y": 103.78125,
+        "wires": [
+            [
+                "ssd_global_next_id"
+            ]
+        ]
+    }
+]

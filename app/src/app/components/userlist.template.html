@@ -1,0 +1,41 @@
+<form #userform>
+  <div fxLayout="column " style="height:100vh;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <header><img [src]="&apos;https://goneutrinos.com/wp-content/uploads/2020/07/logo-light.png&apos;"></header>
+    <div fxLayout="column " style=" " class="user-form" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-list>
+        <mat-list-item style="border-bottom: 1px solid black">
+          <div fxLayout="row " fxFlex="100" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
+            <h3>
+              Users List</h3><button mat-raised-button routerLink="/userform">Add New</button>
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <h4>
+                Name</h4>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <h4>
+                Email</h4>
+            </div>
+          </div>
+        </mat-list-item>
+        <mat-list-item *ngFor="let user of page.userlist" style="border-bottom: 1px solid lightgray; cursor: pointer" (click)="openUserDetail(user)" class="listitem">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{user.name}}
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                {{user.email}}
+              </div>
+            </div>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</form>
